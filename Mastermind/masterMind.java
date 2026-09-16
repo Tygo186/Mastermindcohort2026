@@ -16,7 +16,7 @@ public class masterMind {
 		String oranjePin = "Oranje";
 		String paarsePin = "Paars";
 		
-		String secretcode = "paarsePin, rodePin, blauwePin, groenePin";
+		String secretCode = "paarsePin, rodePin, blauwePin, groenePin";
 		  
 		String zwartePin = "Zwart";
 		String wittePin = "Wit";
@@ -72,7 +72,7 @@ public class masterMind {
 		String vakje3Rij10 = "10-3";
 		String vakje4Rij10 = "10-4";
 		
-		String makervakje1Rij1;
+		
 		String makervakje1Rij1;
 		String makervakje2Rij1;
 		String makervakje3Rij1;

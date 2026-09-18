@@ -5,9 +5,17 @@ import java.util.Scanner;
 public class masterMind {
 	
 	public static void main(String[] args) {
-		Scanner Scanner = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Hoi Mastermind 2026");
+		 System.out.println("------------------------------------------------------------------------------------------------");
+	     System.out.println("Welkom in Mastermind 2026!");
+	     System.out.println("'Zwart' = Goede kleur op de goede plaats");
+	     System.out.println("'White' = Goede kleur verkeerde plaats");
+	     System.out.println("Je mag kiezen uit de kleuren: Rood, Groen, Geel, Oranje, Paars, Blauw");
+	     System.out.println("------------------------------------------------------------------------------------------------");
+	     System.out.println();
+	     System.out.println("---- Raad de code en heel veel succes ----");
+	     System.out.println();
 		
 		String rodePin = "Rood";
 		String blauwePin = "Blauw";
@@ -22,55 +30,95 @@ public class masterMind {
 		String wittePin = "Wit";
 		String legePin = "Leeg";
 		
-		String vakje1Rij1 = "1-1";
-		String vakje2Rij1 = "1-2";
-		String vakje3Rij1 = "1-3";
-		String vakje4Rij1 = "1-4";
-		
-		String vakje1Rij2 = "2-1";
-		String vakje2Rij2 = "2-2";
-		String vakje3Rij2 = "2-3";
-		String vakje4Rij2 = "2-4";
-		
-		String vakje1Rij3 = "3-1";
-		String vakje2Rij3 = "3-2";
-		String vakje3Rij3 = "3-3";
-		String vakje4Rij3 = "3-4";
-		
-		String vakje1Rij4 = "4-1";
-		String vakje2Rij4 = "4-2";
-		String vakje3Rij4 = "4-3";
-		String vakje4Rij4 = "4-4";
-		
-		String vakje1Rij5 = "5-1";
-		String vakje2Rij5 = "5-2";
-		String vakje3Rij5 = "5-3";
-		String vakje4Rij5 = "5-4";
-		
-		String vakje1Rij6 = "6-1";
-		String vakje2Rij6 = "6-2";
-		String vakje3Rij6 = "6-3";
-		String vakje4Rij6 = "6-4";
-		
-		String vakje1Rij7 = "7-1";
-		String vakje2Rij7 = "7-2";
-		String vakje3Rij7 = "7-3";
-		String vakje4Rij7 = "7-4";
-		
-		String vakje1Rij8 = "8-1";
-		String vakje2Rij8 = "8-2";
-		String vakje3Rij8 = "8-3";
-		String vakje4Rij8 = "8-4";
-		
-		String vakje1Rij9 = "9-1";
-		String vakje2Rij9 = "9-2";
-		String vakje3Rij9 = "9-3";
-		String vakje4Rij9 = "9-4";
-		
-		String vakje1Rij10 = "10-1";
-		String vakje2Rij10 = "10-2";
-		String vakje3Rij10 = "10-3";
-		String vakje4Rij10 = "10-4";
+		System.out.println("Rij 1 - Vakje 1: ");
+		String vakje1Rij1 = sc.next();
+		System.out.println("Rij 1 - Vakje 2: ");
+		String vakje2Rij1 = sc.next();
+		System.out.println("Rij 1 - Vakje 3: ");
+		String vakje3Rij1 = sc.next();
+		System.out.println("Rij 1 - Vakje 4: ");
+		String vakje4Rij1 = sc.next();
+
+		System.out.println("Rij 2 - Vakje 1: ");
+		String vakje1Rij2 = sc.next();
+		System.out.println("Rij 2 - Vakje 2: ");
+		String vakje2Rij2 = sc.next();
+		System.out.println("Rij 2 - Vakje 3: ");
+		String vakje3Rij2 = sc.next();
+		System.out.println("Rij 2 - Vakje 4: ");
+		String vakje4Rij2 = sc.next();
+
+		System.out.println("Rij 3 - Vakje 1: ");
+		String vakje1Rij3 = sc.next();
+		System.out.println("Rij 3 - Vakje 2: ");
+		String vakje2Rij3 = sc.next();
+		System.out.println("Rij 3 - Vakje 3: ");
+		String vakje3Rij3 = sc.next();
+		System.out.println("Rij 3 - Vakje 4: ");
+		String vakje4Rij3 = sc.next();
+
+		System.out.println("Rij 4 - Vakje 1: ");
+		String vakje1Rij4 = sc.next();
+		System.out.println("Rij 4 - Vakje 2: ");
+		String vakje2Rij4 = sc.next();
+		System.out.println("Rij 4 - Vakje 3: ");
+		String vakje3Rij4 = sc.next();
+		System.out.println("Rij 4 - Vakje 4: ");
+		String vakje4Rij4 = sc.next();
+
+		System.out.println("Rij 5 - Vakje 1: ");
+		String vakje1Rij5 = sc.next();
+		System.out.println("Rij 5 - Vakje 2: ");
+		String vakje2Rij5 = sc.next();
+		System.out.println("Rij 5 - Vakje 3: ");
+		String vakje3Rij5 = sc.next();
+		System.out.println("Rij 5 - Vakje 4: ");
+		String vakje4Rij5 = sc.next();
+
+		System.out.println("Rij 6 - Vakje 1: ");
+		String vakje1Rij6 = sc.next();
+		System.out.println("Rij 6 - Vakje 2: ");
+		String vakje2Rij6 = sc.next();
+		System.out.println("Rij 6 - Vakje 3: ");
+		String vakje3Rij6 = sc.next();
+		System.out.println("Rij 6 - Vakje 4: ");
+		String vakje4Rij6 = sc.next();
+
+		System.out.println("Rij 7 - Vakje 1: ");
+		String vakje1Rij7 = sc.next();
+		System.out.println("Rij 7 - Vakje 2: ");
+		String vakje2Rij7 = sc.next();
+		System.out.println("Rij 7 - Vakje 3: ");
+		String vakje3Rij7 = sc.next();
+		System.out.println("Rij 7 - Vakje 4: ");
+		String vakje4Rij7 = sc.next();
+
+		System.out.println("Rij 8 - Vakje 1: ");
+		String vakje1Rij8 = sc.next();
+		System.out.println("Rij 8 - Vakje 2: ");
+		String vakje2Rij8 = sc.next();
+		System.out.println("Rij 8 - Vakje 3: ");
+		String vakje3Rij8 = sc.next();
+		System.out.println("Rij 8 - Vakje 4: ");
+		String vakje4Rij8 = sc.next();
+
+		System.out.println("Rij 9 - Vakje 1: ");
+		String vakje1Rij9 = sc.next();
+		System.out.println("Rij 9 - Vakje 2: ");
+		String vakje2Rij9 = sc.next();
+		System.out.println("Rij 9 - Vakje 3: ");
+		String vakje3Rij9 = sc.next();
+		System.out.println("Rij 9 - Vakje 4: ");
+		String vakje4Rij9 = sc.next();
+
+		System.out.println("Rij 10 - Vakje 1: ");
+		String vakje1Rij10 = sc.next();
+		System.out.println("Rij 10 - Vakje 2: ");
+		String vakje2Rij10 = sc.next();
+		System.out.println("Rij 10 - Vakje 3: ");
+		String vakje3Rij10 = sc.next();
+		System.out.println("Rij 10 - Vakje 4: ");
+		String vakje4Rij10 = sc.next();
 		
 		
 		String makervakje1Rij1;
@@ -84,7 +132,7 @@ public class masterMind {
 		String makervakje4Rij2;
 		
 		String makervakje1Rij3;
-		String makervakje2Rij3
+		String makervakje2Rij3;
 		String makervakje3Rij3;
 		String makervakje4Rij3;
 		
@@ -125,5 +173,6 @@ public class masterMind {
 		
 		
 	
+		sc.close();
 	}
 }

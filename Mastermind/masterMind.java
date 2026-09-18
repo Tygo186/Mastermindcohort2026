@@ -11,7 +11,7 @@ public class masterMind {
 	     System.out.println("Welkom in Mastermind 2026!");
 	     System.out.println("'Zwart' = Goede kleur op de goede plaats");
 	     System.out.println("'White' = Goede kleur verkeerde plaats");
-	     System.out.println("Je mag kiezen uit de kleuren: Rood, Groen, Geel, Oranje, Paars, Blauw");
+	     System.out.println("Je kiest uit de kleuren: Rood, Groen, Geel, Oranje, Paars, Blauw");
 	     System.out.println("------------------------------------------------------------------------------------------------");
 	     System.out.println();
 	     System.out.println("---- Raad de code en heel veel succes ----");

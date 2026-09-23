@@ -38,6 +38,16 @@ public class masterMind {
 		String vakje3Rij1 = sc.next();
 		System.out.println("Rij 1 - Vakje 4: ");
 		String vakje4Rij1 = sc.next();
+		
+		if (secretCode.equals("vakje1Rij1 + vakje1Rij2 + vakje1Rij3 + vakje1Rij4")) {
+			System.out.println("goed");
+			
+		}
+			
+		
+		
+		
+		
 
 		System.out.println("Rij 2 - Vakje 1: ");
 		String vakje1Rij2 = sc.next();

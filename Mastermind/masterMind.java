@@ -6,17 +6,18 @@ public class masterMind {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
+		// begin schrem
 		 System.out.println("------------------------------------------------------------------------------------------------");
 	     System.out.println("Welkom in Mastermind 2026!");
 	     System.out.println("'Zwart' = Goede kleur op de goede plaats");
-	     System.out.println("'White' = Goede kleur verkeerde plaats");
-	     System.out.println("Je kiest uit de kleuren: Rood, Groen, Geel, Oranje, Paars, Blauw");
+	     System.out.println("'Wit' = Goede kleur verkeerde plaats");
+	     System.out.println("Je kiest uit de kleuren: Rood, Groen, Geel, Oranje, Paars, Blauw. Let op hoofd leters");
 	     System.out.println("------------------------------------------------------------------------------------------------");
 	     System.out.println();
 	     System.out.println("---- Raad de code en heel veel succes ----");
 	     System.out.println();
 		
+	     // kleuren invoer
 		String rodePin = "Rood";
 		String blauwePin = "Blauw";
 		String gelePin = "Geel";
@@ -24,25 +25,53 @@ public class masterMind {
 		String oranjePin = "Oranje";
 		String paarsePin = "Paars";
 		
-		String secretCode = "paarsePin, rodePin, blauwePin, groenePin";
-		  
+		
+		  // voor check
 		String zwartePin = "Zwart";
 		String wittePin = "Wit";
 		String legePin = "Leeg";
-		
-		System.out.println("Rij 1 - Vakje 1: ");
+		// secret code
+		String code1 = "Paars";
+		String code2 = "Rood";
+		String code3 = "Blauw";
+		String code4 = "Groen";
+
+
+		// RIJ 1
+		System.out.println("Rij 1 - Vul 4 kleuren in:");
 		String vakje1Rij1 = sc.next();
-		System.out.println("Rij 1 - Vakje 2: ");
 		String vakje2Rij1 = sc.next();
-		System.out.println("Rij 1 - Vakje 3: ");
 		String vakje3Rij1 = sc.next();
-		System.out.println("Rij 1 - Vakje 4: ");
 		String vakje4Rij1 = sc.next();
-		
-		if (secretCode.equals("vakje1Rij1 + vakje1Rij2 + vakje1Rij3 + vakje1Rij4")) {
-			System.out.println("goed");
-			
-		}
+
+		if (vakje1Rij1.equals(code1)) {
+		    System.out.println("Zwart");}
+		else if (vakje1Rij1.equals(code2) || vakje1Rij1.equals(code3) || vakje1Rij1.equals(code4)) {
+		    System.out.println("Wit");}
+		else
+		    System.out.println("Leeg");
+
+		if (vakje2Rij1.equals(code2)) {
+		    System.out.println("Zwart");}
+		else if (vakje2Rij1.equals(code1) || vakje2Rij1.equals(code3) || vakje2Rij1.equals(code4)) {
+		    System.out.println("Wit");}
+		else
+		    System.out.println("Leeg");
+
+		if (vakje3Rij1.equals(code3)) {
+		    System.out.println("Zwart");}
+		else if (vakje3Rij1.equals(code1) || vakje3Rij1.equals(code2) || vakje3Rij1.equals(code4)) {
+		    System.out.println("Wit");}
+		else
+		    System.out.println("Leeg");
+
+		if (vakje4Rij1.equals(code4)) {
+		    System.out.println("Zwart");}
+		else if (vakje4Rij1.equals(code1) || vakje4Rij1.equals(code2) || vakje4Rij1.equals(code3)) {
+		    System.out.println("Wit");}
+		else
+		    System.out.println("Leeg");
+
 			
 		
 		

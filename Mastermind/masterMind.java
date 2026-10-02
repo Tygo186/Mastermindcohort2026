@@ -11,6 +11,7 @@ public class masterMind {
 		System.out.println("Welkom in Mastermind 2026!");
 		System.out.println("'Zwart' = Goede kleur op de goede plaats");
 		System.out.println("'Wit' = Goede kleur verkeerde plaats");
+		System.out.println("'Leeg' = Verkeerde kleur");
 		System.out.println("Je kiest uit de kleuren: Rood, Groen, Geel, Oranje, Paars, Blauw. Let op hoofd leters");
 		System.out.println("------------------------------------------------------------------------------------------------");
 		System.out.println();
@@ -41,15 +42,31 @@ public class masterMind {
 
 			
 			for (int j = 0; j < 4; j++) {
-				if (vakje[j].equals(code[j])) {
-					System.out.println("Zwart");
-				} else if (vakje[j].equals(code[0]) || vakje[j].equals(code[1]) || vakje[j].equals(code[2]) || vakje[j].equals(code[3])) {
-					System.out.println("Wit");
-				} else
-					System.out.println("Leeg");
-			}
-		}
 
-		sc.close();
-	}
+			    if (vakje[j].equals(code[j])) {
+			        System.out.println("Zwart");
+
+			    } else {
+			        boolean wit = false;
+
+			        for (int k = 0; k < 4; k++) {
+			            if (vakje[j].equals(code[k])) {
+			                wit = true;
+			            }
+			        }
+
+			        if (wit) {
+			            System.out.println("Wit");
+			        } else {
+			            System.out.println("Leeg");
+			        }
+			    }
+			}
+		
+		}
+	
+	sc.close();
 }
+}
+
+

@@ -17,16 +17,20 @@ public class masterMind {
 		System.out.println();
 		System.out.println("Raad de code en heel veel succes");
 		System.out.println();
-//		secret code
-		String[] code = {"Paars" , "Rood" , "Blauw" , "Groen"};
+		
+//		// Kleuren waaruit je kunt kiezen
+		String[] kleuren = {"Rood", "Groen", "Geel", "Oranje", "Paars", "Blauw"};
+
+		// Secret code
+		String[] code = {kleuren[1] , kleuren[2], kleuren[2], kleuren[5]};
 //		vakjes voor input
-		String[] vakje = new String[4];
+		String[] vakje = new String[code.length];
 //		herhalings loop voor je beurten
 		for (int rij = 1; rij <= 10; rij++) {
 
 			System.out.println("Rij " + rij + " - Vul 4 kleuren in:");
 //			input voor je kleuren
-			for (int j = 0; j < 4; j++) {
+			for (int j = 0; j < vakje.length; j++) {
 				System.out.println("Vakje");
 				System.out.println(j + 1);
 				vakje[j] = sc.next();
@@ -34,7 +38,7 @@ public class masterMind {
 //			win rule begin zetten
 			int zwart = 0;
 //			kleuren checker
-			for (int j = 0; j < 4; j++) {
+			for (int j = 0; j < vakje.length; j++) {
 //				zwart als je gelijke kleuren hebt
 			    if (vakje[j].equals(code[j])) {
 			        System.out.println("Zwart");
@@ -43,7 +47,7 @@ public class masterMind {
 			    } else {
 			        boolean wit = false;
 
-			        for (int k = 0; k < 4; k++) {
+			        for (int k = 0; k < vakje.length; k++) {
 			            if (vakje[j].equals(code[k])) {
 			                wit = true;
 			            }
@@ -57,7 +61,7 @@ public class masterMind {
 			    }
 			}
 //			als je 4 zwart hebt heb je gewonnen dat word gecontroleerd
-			if (zwart == 4) {
+			if (zwart == vakje.length) {
 				System.out.println("je hebt gewonnen");
 				return;
 			}

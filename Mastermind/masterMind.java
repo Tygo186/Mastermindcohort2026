@@ -7,22 +7,19 @@ public class masterMind {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 //		start Scherm mastermind
-		System.out.println("");
 		System.out.println("Welkom in Mastermind 2026!");
 		System.out.println("'Zwart' = Goede kleur op de goede plaats");
 		System.out.println("'Wit' = Goede kleur verkeerde plaats");
 		System.out.println("'Leeg' = Verkeerde kleur");
 		System.out.println("Je kiest uit de kleuren: Rood, Groen, Geel, Oranje, Paars, Blauw. Let op hoofd leters!");
-		System.out.println("");
-		System.out.println();
 		System.out.println("Raad de code en heel veel succes");
-		System.out.println();
-		
+	
+
 //		// Kleuren waaruit je kunt kiezen
-		String[] kleuren = {"Rood", "Groen", "Geel", "Oranje", "Paars", "Blauw"};
+		String[] kleuren = { "Rood", "Groen", "Geel", "Oranje", "Paars", "Blauw" };
 
 		// Secret code
-		String[] code = {kleuren[1] , kleuren[2], kleuren[2], kleuren[5]};
+		String[] code = { kleuren[1], kleuren[2], kleuren[2], kleuren[5] };
 //		vakjes voor input
 		String[] vakje = new String[code.length];
 //		herhalings loop voor je beurten
@@ -40,25 +37,25 @@ public class masterMind {
 //			kleuren checker
 			for (int j = 0; j < vakje.length; j++) {
 //				zwart als je gelijke kleuren hebt
-			    if (vakje[j].equals(code[j])) {
-			        System.out.println("Zwart");
-			        zwart ++;
+				if (vakje[j].equals(code[j])) {
+					System.out.println("Zwart");
+					zwart++;
 //			        anders wit als het goede kleur is verkeerde plek
-			    } else {
-			        boolean wit = false;
+				} else {
+					boolean wit = false;
 
-			        for (int k = 0; k < vakje.length; k++) {
-			            if (vakje[j].equals(code[k])) {
-			                wit = true;
-			            }
-			        }
-			        if (wit) {
-			            System.out.println("Wit");
-			        } else {
+					for (int k = 0; k < vakje.length; k++) {
+						if (vakje[j].equals(code[k])) {
+							wit = true;
+						}
+					}
+					if (wit) {
+						System.out.println("Wit");
+					} else {
 //			        	anders leeg als het niet klopt
-			            System.out.println("Leeg");
-			        }
-			    }
+						System.out.println("Leeg");
+					}
+				}
 			}
 //			als je 4 zwart hebt heb je gewonnen dat word gecontroleerd
 			if (zwart == vakje.length) {
@@ -69,7 +66,7 @@ public class masterMind {
 			if (rij == 10)
 				System.out.println("je hebt verloren");
 		}
-		
-	sc.close();
-}
+
+		sc.close();
+	}
 }

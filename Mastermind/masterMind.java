@@ -19,7 +19,7 @@ public class masterMind {
 		String[] kleuren = { "Rood", "Groen", "Geel", "Oranje", "Paars", "Blauw" };
 
 		// Secret code
-		String[] codes = { kleuren[1], kleuren[2], kleuren[2], kleuren[5] };
+		String[] codes = randomCode.genereerCode(kleuren,4);
 //		vakjes voor input
 		String[] vakjes = new String[codes.length];
 //		herhalings loop voor je beurten

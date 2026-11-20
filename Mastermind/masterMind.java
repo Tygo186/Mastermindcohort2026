@@ -2,7 +2,7 @@ package Mastermind;
 
 import java.util.Scanner;
 
-public class masterMind {
+public class MasterMind {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -36,26 +36,14 @@ public class masterMind {
 			int zwart = 0;
 //			kleuren checker
 			for (int j = 0; j < vakjes.length; j++) {
-//				zwart als je gelijke kleuren hebt
-				if (vakjes[j].equals(codes[j])) {
-					System.out.println("Zwart");
-					zwart++;
-//			        anders wit als het goede kleur is verkeerde plek
-				} else {
-					boolean wit = false;
 
-					for (int k = 0; k < vakjes.length; k++) {
-						if (vakjes[j].equals(codes[k])) {
-							wit = true;
-						}
-					}
-					if (wit) {
-						System.out.println("Wit");
-					} else {
-//			        	anders leeg als het niet klopt
-						System.out.println("Leeg");
-					}
-				}
+				String resultaat = .controleerKleur(vakjes[j], codes, j);
+
+				System.out.println("Resultaat = " + resultaat);
+
+			    if (resultaat.equals("Zwart")) {
+			        zwart++;
+			    }
 			}
 //			als je 4 zwart hebt heb je gewonnen dat word gecontroleerd
 			if (zwart == vakjes.length) {
@@ -69,4 +57,5 @@ public class masterMind {
 
 		sc.close();
 	}
+
 }

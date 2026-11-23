@@ -11,12 +11,12 @@ public class MasterMind {
 		System.out.println("'Zwart' = Goede kleur op de goede plaats");
 		System.out.println("'Wit' = Goede kleur verkeerde plaats");
 		System.out.println("'Leeg' = Verkeerde kleur");
-		System.out.println("Je kiest uit de kleuren: Rood, Groen, Geel, Oranje, Paars, Blauw. Let op hoofd leters!");
+		System.out.println("Je kiest uit de kleuren: Rood, Groen, Geel, Oranje, Paars, Blauw.");
 		System.out.println("Raad de code en heel veel succes");
 	
 
 //		// Kleuren waaruit je kunt kiezen
-		String[] kleuren = { "Rood", "Groen", "Geel", "Oranje", "Paars", "Blauw" };
+		String[] kleuren = { "rood", "groen", "geel", "oranje", "paars", "blauw" };
 
 		// Secret code
 		String[] codes = randomCode.genereerCode(kleuren,4);
@@ -28,9 +28,8 @@ public class MasterMind {
 			System.out.println("Rij " + rij + " - Vul 4 kleuren in:");
 //			input voor je kleuren
 			for (int j = 0; j < vakjes.length; j++) {
-				System.out.println("Vakje");
-				System.out.println(j + 1);
-				vakjes[j] = sc.next();
+				System.out.print("Vakje " + (j + 1) + ": ");
+				vakjes[j] = sc.next().toLowerCase();
 			}
 //			win rule begin zetten
 			int zwart = 0;

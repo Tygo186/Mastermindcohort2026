@@ -37,9 +37,9 @@ public class MasterMind {
 //			kleuren checker
 			for (int j = 0; j < vakjes.length; j++) {
 
-				String resultaat = .controleerKleur(vakjes[j], codes, j);
+				String resultaat = kleurenChecker.controleerKleur(vakjes[j], codes, j);
 
-				System.out.println("Resultaat = " + resultaat);
+				System.out.println(resultaat);
 
 			    if (resultaat.equals("Zwart")) {
 			        zwart++;

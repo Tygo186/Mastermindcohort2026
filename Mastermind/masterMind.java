@@ -41,10 +41,8 @@ public class MasterMind {
 			        for (int i = 0; i < kleuren.length; i++) {
 			            if (vakjes[j].equals(kleuren[i])) {
 			                geldig = true;
-			                
 			            }
 			        }
-
 			        if (geldig) {
 			            break;
 			        }

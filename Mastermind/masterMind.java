@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class MasterMind {
 
 	public static void main(String[] args) {
+		
+		RandomCode code = new RandomCode();
+		RandomCode code2 = new RandomCode();
 		Scanner sc = new Scanner(System.in);
 //		start Scherm mastermind
 		System.out.println("Welkom in Mastermind 2026!");
@@ -19,7 +22,7 @@ public class MasterMind {
 		String[] kleuren = { "rood", "groen", "geel", "oranje", "paars", "blauw" };
 
 		// Secret code
-		String[] codes = randomCode.genereerCode(kleuren,4);
+		String[] codes = code.genereerCode(kleuren,4);
 //		vakjes voor input
 		String[] vakjes = new String[codes.length];
 //		herhalings loop voor je beurten
@@ -28,15 +31,37 @@ public class MasterMind {
 			System.out.println("Rij " + rij + " - Vul 4 kleuren in:");
 //			input voor je kleuren
 			for (int j = 0; j < vakjes.length; j++) {
-				System.out.print("Vakje " + (j + 1) + ": ");
-				vakjes[j] = sc.next().toLowerCase();
+			    System.out.print("Vakje " + (j + 1) + ": ");
+
+			    while (true) {
+			        vakjes[j] = sc.next().toLowerCase();
+
+			        boolean geldig = false;
+
+			        for (int i = 0; i < kleuren.length; i++) {
+			            if (vakjes[j].equals(kleuren[i])) {
+			                geldig = true;
+			                
+			            }
+			        }
+
+			        if (geldig) {
+			            break;
+			        }
+
+			        System.out.println("Deze kleur bestaat niet.");
+			        System.out.println("Kies uit: rood, groen, geel, oranje, paars of blauw.");
+			        System.out.print("Vul opnieuw in: ");
+			    }
 			}
 //			win rule begin zetten
 			int zwart = 0;
 //			kleuren checker
 			for (int j = 0; j < vakjes.length; j++) {
+				
 
-				String resultaat = kleurenChecker.controleerKleur(vakjes[j], codes, j);
+				String resultaat = code2.controleerKleur(vakjes[j], codes, j);
+				
 
 				System.out.println(resultaat);
 
